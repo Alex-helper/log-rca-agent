@@ -1,0 +1,52 @@
+[
+  {
+    "id": "case-checkout-504",
+    "alert": {
+      "severity": "critical",
+      "service": "gateway",
+      "message": "Checkout API 504 rate spike: upstream order-service timeout",
+      "trace_id": "tr-9f2a",
+      "timestamp": "2026-07-16T10:00:05Z"
+    }
+  },
+  {
+    "id": "case-circuit-open",
+    "alert": {
+      "severity": "high",
+      "service": "gateway",
+      "message": "Circuit breaker open for order-service",
+      "trace_id": "tr-c3d4",
+      "timestamp": "2026-07-16T10:02:00Z"
+    }
+  },
+  {
+    "id": "case-inventory-redis",
+    "alert": {
+      "severity": "critical",
+      "service": "inventory-service",
+      "message": "Reserve failures correlated with redis connection refused",
+      "trace_id": "tr-9f2a",
+      "timestamp": "2026-07-16T10:00:04Z"
+    }
+  },
+  {
+    "id": "case-retry-budget",
+    "alert": {
+      "severity": "medium",
+      "service": "gateway",
+      "message": "Retry budget exhausted calling order-service",
+      "trace_id": "tr-a1b2",
+      "timestamp": "2026-07-16T10:01:11Z"
+    }
+  },
+  {
+    "id": "case-pool-wait",
+    "alert": {
+      "severity": "high",
+      "service": "order-service",
+      "message": "inventory-service timeout with elevated pool_wait_ms",
+      "trace_id": "tr-a1b2",
+      "timestamp": "2026-07-16T10:01:20Z"
+    }
+  }
+]
