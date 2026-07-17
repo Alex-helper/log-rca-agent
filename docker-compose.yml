@@ -1,0 +1,20 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8787:8787"
+    env_file:
+      - .env
+    environment:
+      - OPENAI_BASE_URL=${OPENAI_BASE_URL:-https://api.deepseek.com/v1}
+      - MODEL_NAME=${MODEL_NAME:-deepseek-chat}
+      - FEATURE_SUMMARY=${FEATURE_SUMMARY:-1}
+      - FEATURE_CACHE=${FEATURE_CACHE:-1}
+    volumes:
+      - ./backend/fixtures:/app/backend/fixtures:ro
+      - rca-cache:/app/.cache/rca
+
+volumes:
+  rca-cache:
